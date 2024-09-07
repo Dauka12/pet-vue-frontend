@@ -1,18 +1,23 @@
 <script setup>
+import { ref } from 'vue'
+
 defineProps({
   imageUrl: String,
   title: String,
   price: Number,
-  isFavorite: Boolean,
-  isAdded: Boolean
+  id: Number
 })
 const emit = defineEmits(['click-add', 'click-favorite'])
 
+const isAdded = ref(false)
+const isFavorite = ref(false)
+
 const onClickAdd = () => {
+  isAdded.value = !isAdded.value
   emit('click-add')
 }
-
 const onClickFavorite = () => {
+  isFavorite.value = !isFavorite.value
   emit('click-favorite')
 }
 </script>

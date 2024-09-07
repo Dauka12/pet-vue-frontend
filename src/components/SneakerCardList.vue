@@ -1,10 +1,11 @@
 <script setup>
 import SneakerCard from './SneakerCard.vue'
+
 const onClickAdd = () => {
-  console.log('Add')
+  console.log('clicked add in sneaker card with id:' + onClickAdd.id)
 }
 const onClickFavorite = () => {
-  console.log('Favorite')
+  console.log('clicked favorite in sneaker card with id:' + onClickFavorite.id)
 }
 </script>
 <template>
@@ -13,10 +14,17 @@ const onClickFavorite = () => {
       image-url="/sneakers/sneakers-1.jpg"
       title="Men's sneakers Nike Blazer Mid Suede"
       :price="6500"
-      :is-favorite="true"
-      :is-added="true"
       @click-add="onClickAdd"
       @click-favorite="onClickFavorite"
+      :id="17"
+    />
+    <SneakerCard
+      image-url="/sneakers/sneakers-1.jpg"
+      title="Men's sneakers Nike Blazer Mid Suede"
+      :price="6500"
+      @click-add="onClickAdd"
+      @click-favorite="onClickFavorite"
+      :id="18"
     />
   </div>
 </template>
