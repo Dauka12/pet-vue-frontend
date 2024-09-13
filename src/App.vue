@@ -1,9 +1,11 @@
 <script setup>
 import SneakerCardList from './components/SneakerCardList.vue'
+import SneakerDrawer from './components/SneakerDrawer.vue'
 import SneakerHeader from './components/SneakerHeader.vue'
 </script>
 
 <template>
+  <SneakerDrawer />
   <div class="bg-white w-4/5 m-auto rounded-xl shadow-xl mt-14">
     <SneakerHeader />
 
