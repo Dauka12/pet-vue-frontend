@@ -39,6 +39,7 @@ const onClickFavorite = () => {
       <div class="flex flex-col">
         <span class="text-slate-400">Price:</span>
         <b>{{ price }} KZT</b>
+        <span>Учу алгоритмы</span>   
       </div>
       <img @click="onClickAdd" :src="!isAdded ? '/plus.svg' : '/checked.svg'" alt="Plus" />
     </div>
